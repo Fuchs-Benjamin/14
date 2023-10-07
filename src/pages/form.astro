@@ -1,0 +1,58 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="generator" content={Astro.generator} />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>write to us</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="form_top">
+                <a href="/"><</a>
+                <h1>application for membership</h1>
+            </div>
+            <form>
+                <fieldset class="top_textfield"> 
+                    <legend>Your nickname in real live</legend> 
+                    <input required type="text" name="name" placeholder="input your name">
+                    <input required type="text" name="surname" placeholder="input your surname">
+                </fieldset>
+                
+                <fieldset class="w-o-border">
+                    <legend>Your gender</legend>
+                    <label><input required type="radio" name="gender" value="women"> Women</label> 
+                    <label><input required checked type="radio" name="gender" value="man"> Man</label>
+                </fieldset>
+
+                <label>
+                    <input required type="checkbox" name="adult"> 
+                    I,m already 18J old.
+                </label>
+
+                <label>
+                    Your discipline 
+                    <select required name="discipline">
+                        <option value="CS_GO">CS:GO</option>
+                        <option value="Apex_Legends">Apex Legends</option>
+                        <option value="Dota2">Dota 2</option>
+                    </select>
+                </label>
+
+                <textarea name="inform" rows="10" placeholder="Info about you"></textarea>
+
+                <button class="header-btn">Send</button>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
