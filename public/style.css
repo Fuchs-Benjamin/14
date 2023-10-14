@@ -12,6 +12,8 @@ fieldset.w-o-border{
 .container{
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: content-box;
 }
 .section-title{
     font-size: 25px;
@@ -30,7 +32,6 @@ background-color: #222222;
 }
 .nav-menu{
 background-color: #222222;
-height: 60px;
 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.708);
 position: fixed;
 top: 0;
@@ -95,8 +96,10 @@ color: #65daff;
     background: linear-gradient(45deg, #006324d6, #00499c);
 }
 .about{
-    height: 50vh;
+    min-height: 50vh;
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 .about-card{
     display: inline-block;
@@ -282,4 +285,49 @@ color: #65daff;
         line-height: 3em;
         flex: 1 1 auto;
     }
+}
+@media (max-width:767.98px) {
+    .site-header .header-title{
+            font-size: 2rem;
+    }
+    [class^=games-card_img],.games-card_content{
+        display: block;
+        width: 100%;
+    }
+    .games-card{
+        margin: 10px 0;
+    }
+    .blue-part{
+        width: 100%;
+    }
+   
+}
+@media (max-width:1023.98px) {
+    .site-header{
+        position: relative;
+        background-position: 80% 50%;
+        z-index: 0;
+        
+    }
+    .site-header::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.541);
+        z-index: -1;
+
+    }
+    .about-card{
+        display: block;
+        margin-inline: auto;
+        width: 100%;
+    }
+    .blue-part{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .form{
+        margin: 0;
+    }
+
 }
